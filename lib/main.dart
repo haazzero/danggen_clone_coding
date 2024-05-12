@@ -72,7 +72,7 @@ class _DanggenHomeState extends State<DanggenHome> {
         ),
         actions: const [
           AppBarActionItem(icons: Icons.search),
-          AppBarActionItem(icons: Icons.list),
+          // AppBarActionItem(icons: Icons.list),
           AppBarActionItem(icons: Icons.notifications_none_outlined),
         ],
       ),
@@ -94,8 +94,20 @@ class _DanggenHomeState extends State<DanggenHome> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: const Icon(Icons.add),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Icon(Icons.add,color: Colors.white),
+            Text(
+              '글쓰기',
+              style: TextStyle(color: Colors.white, fontSize: 10), // 텍스트 스타일 지정
+            ),
+          ],
+        ),
         backgroundColor: Colors.deepOrangeAccent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0), // 모서리 둥근 정도 조절
+        ),
       ),
     );
   }
@@ -120,9 +132,9 @@ class AppBarActionItem extends StatelessWidget {
 
 const goods = [
   {
-    'image': 'https://picsum.photos/200',
-    'title': '상품 1',
-    'location': '양재동',
+    'image': 'https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/104/40a17a61157f0aa1a7f6dc8fec6df227_res.jpeg',
+    'title': '찌그렁오리',
+    'location': '마곡동',
     'updateAgo': '끌올 10초 전',
     'price': 10000,
     'commentCount': 8,
